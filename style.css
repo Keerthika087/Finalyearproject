@@ -1,0 +1,438 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: ;
+}
+
+body{
+    background-color:#eee;
+   
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(11, 11, 215);
+    padding-left: 40px;
+}
+.header{
+
+    background-color: white;
+    box-shadow: 0 .1rem 1rem rgba(0,0,0.1);
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 17px;
+}
+ nav a{
+    text-decoration: none;
+    padding: 20px;
+    margin: 8px;
+    font-weight: bolder;
+}
+ nav   a:hover{
+    cursor: pointer;
+    color: red;
+} 
+ 
+ button:hover{
+    background-color: rgb(16, 128, 16);
+ }
+ 
+ 
+  .main h1 span{
+    color: green;
+ }
+ 
+  
+.main .an{
+    background: transparent;
+    border-radius: 3px;
+    border: 1px solid ;
+    padding: 10px;
+    
+    
+}
+
+.main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative;
+    background: url(ba2.jpeg) no-repeat;
+    background-size: cover;
+    padding-top: 20rem;
+}
+.main .content{
+    position: absolute;
+    top: 40px;
+    /* left: 500;px */
+   
+}
+.main  a{
+   
+    text-align: center;
+}
+ .main h1{
+
+    padding: 10px;
+}
+.main p{
+    
+    padding: 30px;
+    width: 700px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: bold;
+
+}
+.main a{
+    text-decoration: none;
+}
+
+.about h1{
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    
+}
+.about h1 span{
+    
+    background: rgb(6, 71, 6);
+    color: #fff;
+    padding: 5px 14px;
+    clip-path: polygon(100% 0,93% 50%,100% 99% , 0% 100%,7% 50%,0% 0%);
+
+}
+.box img{
+    width: 200px;
+    height: 140px;
+}
+.box{
+   
+    border: 0px solid black;
+    box-shadow:  0 .1rem 1rem rgb(88, 87, 87);
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 2px;
+    background: #fff;
+    width: 250px;text-align: center;
+}
+.box-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 0px solid black;
+    margin-top: 20px;
+    
+
+}
+.box p{
+    padding: 10px;
+    margin-top: 2px;
+    text-align: center;
+    font-size: 14px;
+
+}
+.box h3{
+    padding: 10px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bolder;
+}
+.products h1{
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+.products h1 span{
+    
+    background: rgb(6, 71, 6);
+    color: #fff;
+    padding: 5px 14px;
+    clip-path: polygon(100% 0,93% 50%,100% 99% , 0% 100%,7% 50%,0% 0%);
+
+}
+.av-card img{
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+}
+.av-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    margin: 5px;
+
+   
+
+}
+.av-card{
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow:  0 .1rem 1rem rgb(88, 87, 87);
+    text-align: center;
+    margin: 15px;
+    background-color: #fff;
+    width: 250px;
+    padding: 15px;
+
+}
+.av-card h2{
+    color: rgb(0, 17, 0);
+}
+.av-btn{
+    
+    text-decoration: none; 
+    background: transparent;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 5px;
+
+}
+.av-card p{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 560;
+    
+}
+.av-card h3{
+    font-size: 19px;
+    /* margin-bottom: 10px; */
+    color: orangered;
+}
+
+
+.about-content{
+    text-align: center; background-color: #eee;
+}
+.about-content h1{
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 32px;
+}
+.about-content h1 span{
+    
+    color: green;
+
+}
+.about-content p{
+    padding: 20px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px; font-weight: bolder;
+    font-size: 17px;
+    
+}
+/* Contact Section */
+.contact-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* Footer Styles */
+.footer {
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer p,
+.footer ul {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.footer-social .social-icons a {
+    margin: 0 0.5rem;
+    display: inline-block;
+}
+
+.footer-social .social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    border-top: 1px solid #555;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+}
+
+
+
+
+.cart-controls {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.cart-quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* nav profile */
+.icon {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown a {
+    display: block;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .dropdown a:hover {
+    background-color: #ddd;
+  }

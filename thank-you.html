@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <style>
+    /* Thank You Page Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.thank-you-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.thank-you-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.thank-you-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.thank-you-container button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.thank-you-container button:hover {
+  background-color: #ff4a3d;
+}
+
+/* Confetti Animation */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffdd57;
+  top: -10px;
+  animation: confetti-fall 5s linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+.confetti:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.confetti:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.confetti:nth-child(3) {
+  left: 30%;
+  animation-delay: 2s;
+}
+
+.confetti:nth-child(4) {
+  left: 40%;
+  animation-delay: 3s;
+}
+
+.confetti:nth-child(5) {
+  left: 50%;
+  animation-delay: 4s;
+}
+  </style>
+</head>
+<body>
+  <div class="thank-you-container">
+    <h1>Thank You for Your Order! 🎉</h1>
+    <p>Your order has been placed successfully. We appreciate your business!</p>
+    <div class="confetti"></div>
+    <button onclick="window.location.href='index.html'">Continue Shopping</button>
+  </div>
+</body>
+</html>
