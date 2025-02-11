@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2>User Profile</h2>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="userData"></tbody>
+            </table>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+    </div>
+
+    <script>
+        function displayUserData() {
+            let storedUser = JSON.parse(localStorage.getItem("userData"));
+            if (storedUser) {
+                document.getElementById("userData").innerHTML = `
+                    <tr><td><strong>First Name</strong></td><td>${storedUser.firstname}</td></tr>
+                    <tr><td><strong>Last Name</strong></td><td>${storedUser.lastname}</td></tr>
+                    <tr><td><strong>Phone</strong></td><td>${storedUser.phone}</td></tr>
+                    <tr><td><strong>Address</strong></td><td>${storedUser.address}</td></tr>
+                    <tr><td><strong>Pincode</strong></td><td>${storedUser.pincode}</td></tr>
+                    <tr><td><strong>Email</strong></td><td>${storedUser.email}</td></tr>
+                `;
+            } else {
+                document.getElementById("userData").innerHTML = "<tr><td colspan='2'>No user data found.</td></tr>";
+            }
+        }
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+
+        // Display stored data on page load
+        displayUserData();
+    </script>
+</body>
+</html>

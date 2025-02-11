@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROCERY</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .icon {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .icon img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .icon img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Grocery </div><i class="fa fa-shopping-basket"></i>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#Features">Freatures</a>
+                <a href="#available"> Available</a>
+                <a href="#about">About Us</a>
+                <a href="#feedback">FeedBack</a>
+                <a href="#contect">Contact Us</a>
+                <a href="history.html">View Order History</a>
+
+            </nav>
+
+            <div>
+                <form class="profil">
+                    <div class="icons-container">
+                        <div class="icon" id="profile">
+                            <img src="profil.jpg" alt="Profile" onclick="toggleDropdown()" />
+
+                            <div class="dropdown" id="profileDropdown">
+                                <a href="login.html">Register</a>
+                                <a href="profile.html">Profile</a>
+                            </div>
+                        </div>
+                        <div class="icon" id="product">
+                            <img src="bucket.jpg" alt="Products" onclick="navigateTo('order.html')" />
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="main" id="home">
+            <div class="content">
+
+                <h1>Fresh And <span>Organic</span> Products For You</h1>
+                <p>This website allows you to purchase fresh and organic products,while experiencing the convenience of
+                    shopping at your fingertips with our online grocery store...
+                </p>
+                <a href="#" class="an">Order Now ></a>
+
+
+            </div>
+
+        </div>
+        <hr>
+        <section id="Features">
+            <div class="about">
+                <div class="about_text">
+                    <h1> Our <span>Features</span></h1>
+
+                    <div class="box-container">
+                        <div class="box">
+                            <img src="food.jpg" alt="">
+                            <h3>Fresh And Organic</h3>
+                            <p>Hand picked ,Locally Sourced, Chemical Free Products And Promoting healthy living ...</p>
+                        </div>
+                        <div class="box">
+                            <img src="delevery boy.jfif" alt="">
+                            <h3>Free Delivery</h3>
+                            <p>No Minimum order, No Distance Limits,Free delivery on all Orders , Every Single Time</p>
+                        </div>
+                        <div class="box">
+                            <img src="cash.jpg" alt="">
+                            <h3>Easy Payments</h3>
+                            <p>Secure checkout, Credit and Debit Cards , Net Banking wallets and Easy Refund ,No
+                                Hassless </p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <section id="available">
+        <div class="products">
+            <h1>Today <span>Available</span></h1>
+            <div class="av-box">
+                <div class="av-card" data-product-id="1">
+                    <img src="img/cabbage.jpg" alt="">
+                    <h2>Cabbage</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3 id="total-amount'"><span>&#8377</span>50</h3>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+
+                </div>
+                <div class="av-card" data-product-id="2">
+                    <img src="img/carot.jpg" alt="">
+                    <h2>Carrot</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3> <span>&#8377</span>60</h3>
+
+                    <button class="add-to-cart-btn">Add to Cart</button>
+
+                </div>
+                <div class="av-card" data-product-id="3">
+                    <img src="img/tomatoes.jpg" alt="">
+                    <h2>Tomato</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3> <span>&#8377</span>90</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="4">
+                    <img src="img/potato.jpg" alt="">
+                    <h2>Potato</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>90</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="5">
+                    <img src="img/corn.jpg" alt="">
+                    <h2>Corn</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3> <span>&#8377</span>170</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="6">
+                    <img src="img/capsicum.jpg" alt="">
+                    <h2>Capsicum</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>180</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="7">
+                    <img src="img/broccoli-1238250_1280.jpg" alt="">
+                    <h2>Broccoli</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3> <span>&#8377</span>238.60</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="8">
+                    <img src="img/onion.jpg" alt="">
+                    <h2>Onion</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>60</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="9">
+                    <img src="img/mushroom.jpg" alt="">
+                    <h2>mushroom</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>230</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="10">
+                    <img src="img/bananas.jpg" alt="">
+                    <h2>Bananna</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>100</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                       
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="11">
+                    <img src="img/fresh-strawberry.jpg" alt="">
+                    <h2>Strawberry</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>460</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                       
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="12">
+                    <img src="img/papaya-fruit-isolated.jpg" alt="">
+                    <h2>Papaya</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>70</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="13">
+                    <img src="img/graps.jpg" alt="">
+                    <h2>Graps</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>93</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="14">
+                    <img src="img/cheery.jpg" alt="">
+                    <h2>Cherry</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>350</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                       
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="15">
+                    <img src="img/Watermelon_1.jpg" alt="">
+                    <h2>Watermelon</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3> <span>&#8377</span>40</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="16">
+                    <img src="img/apple.jpg" alt="">
+                    <h2>Apple</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>300</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="17">
+                    <img src="img/orange.jpg" alt="">
+                    <h2>Orange</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>75.62</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="18">
+                    <img src="img/pineapple.jpg" alt="">
+                    <h2>Pineapple</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>80</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+                </div>
+                <div class="av-card" data-product-id="19">
+                    <img src="img/mango.jpg" alt="">
+                    <h2>Mango</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>130</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+                <div class="av-card" data-product-id="20">
+                    <img src="img/pome.jpg" alt="">
+                    <h2>Pomegranate</h2>
+                    <p>The grocery shop products Visibly displays one kilogram weight mesurement for customer clarity
+                    </p>
+                    <h3><span>&#8377</span>250</h3>
+                    <div class="cart-controls">
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+    <section id="about">
+        <div class="about-content">
+            <h1>About <span>Us</span></h1>
+            <p>We are committed to bringing you the freshest produce directly from local farmers.
+                Our mission is to support sustainable agriculture while delivering high-quality fruits
+                and vegetables to your doorstep.</p>
+        </div>
+    </section>
+    <section id="feedback">
+        <section class="contact-section">
+            <div class="contact-container">
+
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you. Drop us a message below!</p>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </section>
+    <section id="contect">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing the best services to our customers. Thank you for visiting!</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#Features">Features</a></li>
+                        <li><a href="#available">Available</a></li>
+                        <li><a href="#about ">About Us</a></li>
+                        <li><a href="#feedback">Feed Back</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fresh Beats. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </section>
+    <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
