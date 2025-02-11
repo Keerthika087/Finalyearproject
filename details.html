@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almost There</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: black;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .form-container p {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: calc(50% - 10px);
+            margin: 5px 5px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        .form-container input:last-of-type {
+            width: calc(100% - 10px);
+            margin-left: 5px;
+        }
+
+        .form-container button {
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+
+        .form-container button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .form-container button:hover:not(:disabled) {
+            background-color: #c40812;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Almost There</h2>
+        <p>Help us to know you better</p>
+        <form id="user-form">
+            <div style="display: flex;">
+                <input type="text" id="first-name" placeholder="First Name" oninput="checkInputs()">
+                <input type="text" id="last-name" placeholder="Last Name" oninput="checkInputs()">
+            </div>
+            <input type="email" id="email" placeholder="Enter Email" oninput="checkInputs()">
+            <button id="start-shopping" disabled>Start Shopping</button>
+        </form>
+    </div>
+
+    <script>
+        function checkInputs() {
+            const firstName = document.getElementById("first-name").value.trim();
+            const lastName = document.getElementById("last-name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const button = document.getElementById("start-shopping");
+
+            // Enable the button only if all fields are filled
+            if (firstName && lastName && email) {
+                button.disabled = false;
+            } else {
+                button.disabled = true;
+            }
+        }
+
+        document.getElementById("user-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission for now
+            alert("Form Submitted! Redirecting to shopping page...");
+            window.location.href = "index.html"; // Redirect to shopping page
+        });
+    </script>
+</body>
+</html>
