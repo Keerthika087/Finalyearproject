@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order History</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+ <style>
+    /* Order History Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.order-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px auto;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.order-item p {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.order-item ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.order-item ul li {
+  list-style-type: disc;
+  margin: 5px 0;
+}
+
+#continue-shopping-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+#continue-shopping-btn:hover {
+  background-color: #0056b3;
+}
+ </style>
+</head>
+<<body>
+    <h1>Order History</h1>
+    <div id="order-history"></div> <!-- Order History Display -->
+    <button id="continue-shopping-btn">Continue Shopping</button>
+  
+    <style>
+      /* Global Styling */
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        text-align: center;
+        padding: 20px;
+      }
+  
+      h1 {
+        color: #333;
+        font-size: 28px;
+      }
+  
+      #order-history {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+  
+      /* Order Card */
+      .order-card {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        width: 90%;
+        max-width: 650px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+  
+      .order-card:hover {
+        /* transform: scale(1.03); */
+        
+        
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      }
+  
+      /* Order Header */
+      .order-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+  
+      .order-header h3 {
+        margin: 0;
+        color: #007bff;
+      }
+  
+      .order-info p {
+        margin: 5px 0;
+        font-size: 14px;
+      }
+  
+      /* Items Row */
+      .items-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        scrollbar-color: #bbb #f4f4f4;
+      }
+  
+      .items-container::-webkit-scrollbar {
+        height: 8px;
+      }
+  
+      .items-container::-webkit-scrollbar-thumb {
+        background: #bbb;
+        border-radius: 10px;
+      }
+  
+      .item-box {
+        min-width: 120px;
+        background: #f8f9fa;
+        padding: 8px;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 14px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      /* Continue Shopping Button */
+      button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #28a745, #218838);
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+  
+      button:hover {
+        background: linear-gradient(135deg, #218838, #1c7430);
+        transform: scale(1.05);
+      }
+    </style>
+  
+    <script>
+      // Function to display order history
+      function displayOrderHistory() {
+        const orderHistory = JSON.parse(localStorage.getItem('orderHistory')) || [];
+        const orderHistoryContainer = document.getElementById('order-history');
+  
+        if (orderHistory.length === 0) {
+          orderHistoryContainer.innerHTML = '<p>No orders found.</p>';
+          return;
+        }
+  
+        let html = '';
+  
+        orderHistory.forEach((order, index) => {
+          let itemsHtml = order.items
+            .map(item => `<div class="item-box">${item.name} - ₹${item.price} x ${item.quantity}</div>`)
+            .join('');
+  
+          html += `
+            <div class="order-card">
+              <div class="order-header">
+                <h3>Order #${index + 1}</h3>
+                <span>${order.date}</span>
+              </div>
+              <div class="order-info">
+                <p><strong>Total:</strong> ₹${order.totalAmount.toFixed(2)}</p>
+                <p><strong>Payment Mode:</strong> ${order.paymentMode}</p>
+                <p><strong>Status:</strong> ${order.status}</p>
+              </div>
+              <div class="items-container">
+                ${itemsHtml}
+              </div>
+            </div>
+          `;
+        });
+  
+        orderHistoryContainer.innerHTML = html;
+      }
+  
+      // Display order history when the page loads
+      window.onload = displayOrderHistory;
+  
+      // Continue Shopping Button
+      document.getElementById('continue-shopping-btn').addEventListener('click', () => {
+        window.location.href = 'index.html';
+      });
+    </script>
+  </body>
+  
+</html>
